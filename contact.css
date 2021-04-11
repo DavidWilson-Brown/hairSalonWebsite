@@ -4,14 +4,7 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #0d0d0d;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  background-color: #f8fbfd;
 }
 
 /* HEADER */
@@ -65,43 +58,55 @@ nav > a:hover, li p:hover, #selected {
   color: #0d0d0d;
 }
 
-/* SHOWCASE */
-main .main-banner {
-  width: 100%;
-  height: 500px;
-  margin-left: 50px;
-  background-image: url(./Images/theGentlemanStache.jpg);
-  background-size: 900px 700px;
-  background-repeat: no-repeat;
-  background-position: left;
+/* MAIN CONTAINER & HEADING */
+main {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+
+#blog-headline {
+  width: 380px;
+  padding: 3px 25px;
+  font-family: 'Sanchez', serif;
+  text-align: center;
+  background-color: #0d0d0d;
+  color: #D99E32;
+}
+
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.contact-form input {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  height: 55px;
+  border: 2px solid #0d0d0d;
   text-align: center;
 }
 
-.main-info {
-  line-height: 55px;
+#message {
+  margin-bottom: 30px;
+  padding-top: 15px;
+  resize: none;
+  border: 2px solid #0d0d0d;
+  text-align: center;
 }
 
-#headline {
-  color: #D99E32;
-  background-color: #0d0d0d;
-}  
 
-.main-info span {
-  padding: 12px;
-  background-color: #0d0d0d;
-  color: #f8fbfd;
-  font-size: 18px;
-}
-
-.main-info p {
-  margin-bottom: 5px;
-}
-
-#inspire-button {
-  padding: 15px 30px;
+/* FORM BUTTON */
+button {
+  padding: 18px 30px;
+  margin-bottom: 5%;
   text-decoration: none;
   background-color: #D99E32;
   text-transform: lowercase;
@@ -109,56 +114,11 @@ main .main-banner {
   font-family: 'Sanchez', serif;
 }
 
-#inspire-button:hover {
+button:hover {
   background-color: rgb(217, 158, 50, 0.60);
   transition-duration: 2s;
 }
 
-/* STYLE BANNER */
-.style-banner {
-  padding: 40px 10px;
-}
-
-.style-banner a {
-  text-align: center;
-  font-family: 'Sanchez', serif;
-  color: #f8fbfd;
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-li p {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 24px;
-}
-
-.style-img {
-  display: block;
-  width: 300px;
-  height: 80%;
-  object-fit: cover;
-  object-position: center;
-  border: solid #D99E32 2px;
-  filter: grayscale(100%);
-}
-
-.style-img:hover {
-  filter: grayscale(0%);
-  transition: 0.3s ease-in-out;
-}
-
-#middle-img {
-  margin: 0 25px;
-}
 
 /* FOOTER */
 footer {
@@ -187,40 +147,34 @@ footer p {
   color: #f8fbfd;
 }
 
+
 /* MEDIA QUERIES */
-
 @media (min-width: 320px) {
-  .main-info {
-    padding: 5% 0 0 3%;
+  article {
+    margin: 1% 10% 3% 15%;
   }
-
-  .main-banner {
-    display: flex;
-    align-items: left;
-    flex-wrap: wrap;
-    text-align: left;
+  #shopPhoto {
+    width: 90%;
   }
-
-  }
-
   .footer-wrapper {
     width: 100%;
     justify-content: center;
   }
-
   .footer-wrapper nav {
     padding-top: 15px;
   }
+}
 
 @media (min-width: 576px) {
   .main-nav {
     padding: 0 15%;
   }
-
-  .main-info {
-    padding: 5% 0 0 10%;
+  article {
+    margin: 1% 20% 3% 20%;
   }
-
+  #mustacchio-chair {
+    width: 620px;
+  }
   .footer-wrapper {
     justify-content: space-between;
   }
@@ -230,10 +184,9 @@ footer p {
   .main-nav {
     padding: 0 30%;
   }
-  .main-info {
-    padding: 2% 8% 2% 50%;
+  article {
+    margin: 1% 30% 3% 30%;
   }
-
   .footer-wrapper {
     width: 85%;
   }
